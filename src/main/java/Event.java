@@ -24,9 +24,35 @@ public class Event {
     return mEntertainment;
   }
 
-  public int getPrice(Event party){
-    
+  public int foodCost(){
+    int cost = 0;
+    String food = mFood;
+    if(food.equals("chicken")){
+      cost =+ 6;
+    }
+    else if(food.equals("fish")){
+      cost =+ 8;
+    }
+    else if(food.equals("vegetarian")){
+      cost =+ 5;
+    }
+    else if(food.equals("steak")){
+      cost =+ 7;
+    }
+    return cost;
   }
 
+  public int calculatePrice(Event party){
+    int people = party.mGuests;
+    String food = party.mFood;
+    String drinks = party.mBeverages;
+    String passTime = party.mEntertainment;
+    int totalCost = 0;
+
+
+    return totalCost;
+
+
+  }
 
 }

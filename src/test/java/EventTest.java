@@ -28,6 +28,12 @@ public class EventTest {
     Event testEvent = new Event(10, "chicken", "beer", "band");
     assertEquals("band", testEvent.getEntertainment());
   }
+  @Test
+  public void objectPass_addFoodCost_int(){
+    Event testEvent = new Event(10, "chicken", "beer", "band");
+    assertEquals(6, testEvent.foodCost());
+  }
+
 
 
 }
