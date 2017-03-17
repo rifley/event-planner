@@ -43,6 +43,8 @@ public class EventTest {
     Event testEvent = new Event(10, "chicken", "beer", "live band");
     assertEquals(250, testEvent.entertainmentCost());
   }
+
+  // Eventually moved this functionality to app.java instead. 
   // @Test
   // public void totalCost_addUpAllCosts_int(){
   //   Event testEvent = new Event(10, "chicken", "beer", "live band");
