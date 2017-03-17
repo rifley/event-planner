@@ -25,7 +25,7 @@ public class Event {
   }
 
   public int getPrice(Event party){
-
+    
   }
 
 
