@@ -23,6 +23,19 @@ public class Event {
   public String getEntertainment(){
     return mEntertainment;
   }
+  public void setGuests(int guests){
+    this.mGuests = guests;
+  }
+  public void setFood(String food){
+    this.mFood = food;
+  }
+  public void setBevs(String bevs){
+    this.mBeverages = bevs;
+  }
+  public void setEntertainment(String entertainment){
+    this.mEntertainment = entertainment;
+  }
+
 
   public int foodCost(){
     int cost = 0;
@@ -74,9 +87,4 @@ public class Event {
     return cost;
   }
 
-  public int totalCost(int guests, int foodCost, int drinkCost, int entertainmentCost){
-    int totalCost = 0;
-    totalCost = guests * (foodCost + drinkCost) + entertainmentCost;
-    return totalCost;
-  }
 }

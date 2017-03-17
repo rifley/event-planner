@@ -17,7 +17,10 @@
 
 |Behavior | Input | Output |
 |---------|-------|--------|
-|things|are|happening|
+|navigate user to input areas for event properties|guests|How many guests will attend|
+|add costs for different event properties|10 guests, beer|40$|
+|discount for guest threshold|guests:150|total cost = - $50|
+
 
 
 ## Technologies Used
