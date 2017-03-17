@@ -28,31 +28,55 @@ public class Event {
     int cost = 0;
     String food = mFood;
     if(food.equals("chicken")){
-      cost =+ 6;
+      cost =+ 4;
     }
     else if(food.equals("fish")){
-      cost =+ 8;
+      cost =+ 6;
     }
     else if(food.equals("vegetarian")){
       cost =+ 5;
     }
     else if(food.equals("steak")){
-      cost =+ 7;
+      cost =+ 6;
+    }
+    return cost;
+  }
+  public int drinkCost(){
+    int cost = 0;
+    String drinks = mBeverages;
+    if(drinks.equals("non-alcoholic")){
+      cost =+ 1;
+    }
+    else if(drinks.equals("wine")){
+      cost =+ 5;
+    }
+    else if(drinks.equals("beer")){
+      cost =+ 3;
+    }
+    else if(drinks.equals("full bar")){
+      cost =+ 10;
     }
     return cost;
   }
 
-  public int calculatePrice(Event party){
-    int people = party.mGuests;
-    String food = party.mFood;
-    String drinks = party.mBeverages;
-    String passTime = party.mEntertainment;
-    int totalCost = 0;
-
-
-    return totalCost;
-
-
+  public int entertainmentCost(){
+    int cost = 0;
+    String entertainment = mEntertainment;
+    if(entertainment.equals("live singer")){
+      cost =+ 120;
+    }
+    else if(entertainment.equals("live band")){
+      cost =+ 250;
+    }
+    else if(entertainment.equals("dj")){
+      cost =+ 80;
+    }
+    return cost;
   }
 
+  public int totalCost(int guests, int foodCost, int drinkCost, int entertainmentCost){
+    int totalCost = 0;
+    totalCost = guests * (foodCost + drinkCost) + entertainmentCost;
+    return totalCost;
+  }
 }
