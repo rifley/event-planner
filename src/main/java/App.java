@@ -16,7 +16,7 @@ public class App {
         int guests = Integer.parseInt(guestsInput);
         //Can't figure out how to stop this from breaking if user inputs non numeric character//
         if(guests>150){
-          System.out.println("WOW! You have a lot of friends! User this coupon 'many friends' at checkout to recieve a discount because you have " + guests + " attending. Just WOW");
+          System.out.println("WOW! You have a lot of friends! Use this coupon 'many friends' at checkout to recieve a discount because you have " + guests + " attending. Just WOW");
           party.setGuests(guests);
         }
         else if(guests>0){
@@ -63,15 +63,12 @@ public class App {
       else if(userNavigation.equals("find cost")){
         System.out.println("Enter any coupons you may have: ");
         String userCoupon = myConsole.readLine();
-
         int finalCost = 0;
         int guests = party.getGuests();
         int foodCost = party.foodCost();
         int drinksCost = party.drinkCost();
         int entertainmentCost = party.entertainmentCost();
-
         finalCost = totalCost(guests, foodCost, drinksCost, entertainmentCost);
-        System.out.println(finalCost);
         if(guests > 150 && userCoupon.equals("many friends")) {
           int newCost = finalCost - 80;
           System.out.println("The final cost of your event is going to be $" + newCost + "! Thank you! You can edit your settings at any time and get a new quote.");
